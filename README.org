@@ -6,6 +6,6 @@
   - Python :: [[https://github.com/dill-format/dill-python][dill-python]]
   - C# :: Currently under development
 * Where is the specification?
-  [[./format.org][In the file format.org]]
+  In the file [[./format.org][format.org]]
 * Is there an example file?
-  Yes, [[./test.toml][in the file test.toml]]
+  Yes, in the file [[./test.toml][test.toml]]
