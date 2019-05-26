@@ -1,0 +1,11 @@
+#+TITLE: Dill
+#+AUTHOR: noisytoot
+* What is dill?
+  A business card format using TOML
+* Is there a program to read Dill?
+  Yes, it is called [[https://github.com/dill-format/dill-python][dill-python]] and is written in python
+  A version in C# is currently under development
+* Where is the specification?
+  [[./format.org][In the file format.org]]
+* Is there an example file?
+  Yes, [[./test.toml][in the file test.toml]]
