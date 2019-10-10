@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-06-21 Fri 17:50 -->
+<!-- 2019-10-10 Thu 19:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dill format specification v1.0.0</title>
@@ -247,17 +247,17 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3be4c98">1. File extension</a></li>
-<li><a href="#org57816c7">2. The shebang line</a></li>
-<li><a href="#orgf55a403">3. The <code>[meta]</code> section</a></li>
-<li><a href="#orgeb76fcf">4. The <code>[define]</code> section</a></li>
-<li><a href="#orgd30a251">5. The <code>[data]</code> section</a></li>
-<li><a href="#orge33cdc8">6. Non-standard extensions</a></li>
+<li><a href="#org4a4a1c6">1. File extension</a></li>
+<li><a href="#org0f016f4">2. The shebang line</a></li>
+<li><a href="#orga3347d0">3. The <code>[meta]</code> section</a></li>
+<li><a href="#org0c638ae">4. The <code>[define]</code> section</a></li>
+<li><a href="#orgae26e70">5. The <code>[data]</code> section</a></li>
+<li><a href="#orgd0a1b2b">6. Non-standard extensions</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3be4c98" class="outline-2">
-<h2 id="org3be4c98"><span class="section-number-2">1</span> File extension</h2>
+<div id="outline-container-org4a4a1c6" class="outline-2">
+<h2 id="org4a4a1c6"><span class="section-number-2">1</span> File extension</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 .toml or .dill
@@ -265,17 +265,17 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org57816c7" class="outline-2">
-<h2 id="org57816c7"><span class="section-number-2">2</span> The shebang line</h2>
+<div id="outline-container-org0f016f4" class="outline-2">
+<h2 id="org0f016f4"><span class="section-number-2">2</span> The shebang line</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Dill files can begin with a shebang line (example: "<code>#!/path/to/dill read</code>"), usually "<code>#!/usr/local/bin/dill read</code>"
+Dill files can begin with a shebang line (example: "<code>#!/path/to/dill read</code>"), example: "<code>#!/usr/local/bin/dill read</code>"
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf55a403" class="outline-2">
-<h2 id="orgf55a403"><span class="section-number-2">3</span> The <code>[meta]</code> section</h2>
+<div id="outline-container-orga3347d0" class="outline-2">
+<h2 id="orga3347d0"><span class="section-number-2">3</span> The <code>[meta]</code> section</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Documents should contain the <code>[meta]</code> section.
@@ -289,8 +289,8 @@ Documents should contain the <code>[meta]</code> section.
 </div>
 </div>
 
-<div id="outline-container-orgeb76fcf" class="outline-2">
-<h2 id="orgeb76fcf"><span class="section-number-2">4</span> The <code>[define]</code> section</h2>
+<div id="outline-container-org0c638ae" class="outline-2">
+<h2 id="org0c638ae"><span class="section-number-2">4</span> The <code>[define]</code> section</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 This section is used to define custom keys. Once defined the will be recognised by the Dill program accordingly replaced with the value.
@@ -314,8 +314,8 @@ the key must be a string
 </div>
 </div>
 
-<div id="outline-container-orgd30a251" class="outline-2">
-<h2 id="orgd30a251"><span class="section-number-2">5</span> The <code>[data]</code> section</h2>
+<div id="outline-container-orgae26e70" class="outline-2">
+<h2 id="orgae26e70"><span class="section-number-2">5</span> The <code>[data]</code> section</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 The <code>location</code> key has 4 following sub keys: <code>pluscode</code>, <code>latlong</code>, <code>address</code>, <code>postcode</code>.
@@ -338,7 +338,8 @@ The order of elements in the <code>location.latlong</code> array is: first latit
 </p>
 
 <p>
-All sub keys of <code>location</code>, and <code>contact</code> should have modifiers. Examples for <code>contact.phone</code>, and <code>contact.email</code> - Home, Work, etc. Examples for <code>contact.username</code> - GitHub, Twitter, etc.
+All sub keys of <code>location</code>, and <code>contact</code> should have modifiers.
+Examples for <code>contact.phone</code>, and <code>contact.email</code> - Home, Work, etc. Examples for <code>contact.username</code> - GitHub, Twitter, GitLab, Mastodon, etc.
 </p>
 <dl class="org-dl">
 <dt>The string <code>name.first</code></dt><dd>first name</dd>
@@ -357,22 +358,22 @@ All sub keys of <code>location</code>, and <code>contact</code> should have modi
 </div>
 </div>
 
-<div id="outline-container-orge33cdc8" class="outline-2">
-<h2 id="orge33cdc8"><span class="section-number-2">6</span> Non-standard extensions</h2>
+<div id="outline-container-orgd0a1b2b" class="outline-2">
+<h2 id="orgd0a1b2b"><span class="section-number-2">6</span> Non-standard extensions</h2>
 <div class="outline-text-2" id="text-6">
 <p>
-There are two types of non-standard extentions: ones beginning with <code>extension.</code> and ones beginning with <code>custom.</code>.
+There are two types of non-standard extensions: ones beginning with <code>extension.</code> and ones beginning with <code>custom.</code>.
 </p>
 <dl class="org-dl">
-<dt>First category (beginning with extention.)</dt><dd>should be called <code>extension."Whatever you want it to be"</code>.</dd>
-<dt>Second category (beginning with custom.)</dt><dd>extentions should be called <code>custom.'Whatever you want it to be'</code>, unless they are defined in <code>[define]</code> section.</dd>
+<dt>First category (beginning with extension.)</dt><dd>should be called <code>extension."Whatever you want it to be"</code>, "Whatever you want it to be" can be of any type, unlike with <code>custom</code>.</dd>
+<dt>Second category (beginning with custom.)</dt><dd>extensions should be called <code>custom.'Whatever you want it to be'</code>, unless they are defined in the <code>[define]</code> section.</dd>
 </dl>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: noisytoot, olive-oyl</p>
-<p class="date">Created: 2019-06-21 Fri 17:50</p>
+<p class="date">Created: 2019-10-10 Thu 19:27</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
